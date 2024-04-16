@@ -1,5 +1,11 @@
+import { Metadata } from "next";
+
 import { AllPosts } from "@/components/all-posts/all-posts";
 import { postsList } from "@/components/posts/posts-list";
+
+export const metadata: Metadata = {
+  title: "Portfolio | Blog",
+};
 
 export default function Blog() {
   return (

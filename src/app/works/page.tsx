@@ -1,5 +1,11 @@
+import { Metadata } from "next";
+
 import { Works as WorksList } from "@/components/works/works";
 import { worksList } from "@/components/works/works-list";
+
+export const metadata: Metadata = {
+  title: "Portfolio | Works",
+};
 
 export default function Works() {
   return (
