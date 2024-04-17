@@ -12,8 +12,8 @@ export const Introduce = (): JSX.Element => {
           <br /> Frontend Developer
         </h1>
         <p className="text-dark text-center lg:text-start">
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
-          velit mollit. Exercitation veniam consequat sunt nostrud amet.
+          Developer with more than 2 years of experience. Having commercial experience in several small freelance
+          projects, I’m always looking for the best solution using the latest technologies.
         </p>
         <ButtonLoadCV />
       </article>

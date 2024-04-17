@@ -11,8 +11,8 @@ export const Posts = ({ postsList }: Props): JSX.Element => {
   return (
     <>
       {latestPosts.map(({ id, ...postsProps }) => (
-        <article key={id} className="py-6 px-5 bg-white shadow rounded text-dark">
-          <PostCard id={id} {...postsProps} />
+        <article key={id} className="py-6 px-5 flex-[50%] flex flex-col bg-white shadow rounded text-dark">
+          <PostCard id={id} length={100} {...postsProps} />
         </article>
       ))}
     </>
