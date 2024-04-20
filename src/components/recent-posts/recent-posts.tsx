@@ -1,15 +1,21 @@
-import { Posts } from "@/components/posts/posts";
-import { postsList } from "@/components/posts/posts-list";
 import Link from "next/link";
 
+import { useTranslations } from "next-intl";
+
+import { Posts } from "@/components/posts/posts";
+import { generatePosts } from "@/components/posts/posts-list";
+
 export const RecentPosts = (): JSX.Element => {
+  const t = useTranslations("posts");
+  const postsList = generatePosts();
+
   return (
     <section className="bg-secondary/10 tracking-wide">
       <div className="pb-8 content-container">
         <div className="py-6 w-full flex justify-between">
-          <h6 className="text-[22px] text-dark">Recent posts</h6>
+          <h6 className="text-[22px] text-dark">{t("latest-updates-title")}</h6>
           <Link href="/blog" className="text-secondary hover:text-primary transition-colors duration-200">
-            View all
+            {t("button-view-all")}
           </Link>
         </div>
 
