@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 
-import type { Work } from "@/types/work";
+import type { Work } from "@/shared/interfaces/work";
 import { WorkCard } from "@/components/work-card/work-card";
 
 interface Props {
@@ -13,7 +13,7 @@ export const PreviewWorks = ({ worksList }: Props): JSX.Element => {
 
   return (
     <section className="content-container text-dark tracking-wide">
-      <h6 className="pt-6 text-[22px] text-start">{t("featured-projects-title")}</h6>
+      <h2 className="pt-6 text-[clamp(1.2rem,3vw,1.5rem)] text-start">{t("featured-projects-title")}</h2>
       {previewWorksList.map(({ id, ...workProps }) => (
         <WorkCard key={id} id={id} {...workProps} />
       ))}

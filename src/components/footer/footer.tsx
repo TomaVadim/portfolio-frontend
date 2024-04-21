@@ -6,7 +6,7 @@ export const Footer = (): JSX.Element => {
   const t = useTranslations("footer");
 
   return (
-    <footer className="content-container py-12 tracking-wide">
+    <footer className="container flex flex-col items-center py-12 tracking-wide">
       <SocialLinks />
 
       <span className="block text-dark text-xs text-center">{t("copyright")}</span>

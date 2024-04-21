@@ -27,10 +27,10 @@ const links: Link[] = [
 
 export const SocialLinks = (): JSX.Element => {
   return (
-    <ul className="mb-5 flex gap-10">
+    <ul className="mb-5 flex items-center gap-10">
       {links.map(({ href, icon }) => (
         <li key={href}>
-          <a href={href} target="_blank">
+          <a href={href} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon className="text-dark w-8 hover:text-primary transition-colors duration-200" icon={icon} />
           </a>
         </li>

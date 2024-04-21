@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 
-import type { Work } from "@/types/work";
+import type { Work } from "@/shared/interfaces/work";
 import { WorkCard } from "@/components/work-card/work-card";
 
 interface Props {

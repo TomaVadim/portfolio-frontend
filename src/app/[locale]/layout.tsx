@@ -1,42 +1,30 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Montserrat } from "next/font/google";
-
-import { NextIntlClientProvider, useMessages } from "next-intl";
 
 import { locales } from "@/navigation";
 import { Header } from "@/components/header/header";
 import { Footer } from "@/components/footer/footer";
+import { LayoutProps } from "@/shared/interfaces/layout-props";
+import { montserrat } from "@/public/styles/fonts";
+import { NextIntlClientProvider } from "@/providers/next-intl-client-provider";
 
 import "./globals.css";
-
-const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Portfolio",
 };
 
-export default function RootLayout({
-  children,
-  params: { locale },
-}: Readonly<{
-  children: React.ReactNode;
-  params: {
-    locale: string;
-  };
-}>) {
+export default function RootLayout({ children, params: { locale } }: Readonly<LayoutProps>) {
   if (!locales.includes(locale)) {
     notFound();
   }
 
-  const messages = useMessages();
-
   return (
     <html lang={locale}>
-      <NextIntlClientProvider locale={locale} messages={messages}>
-        <body className={`${montserrat.className} flex flex-col`}>
+      <NextIntlClientProvider locale={locale}>
+        <body className={montserrat.className}>
           <Header locale={locale} />
-          <main className="grow">{children}</main>
+          <main>{children}</main>
           <Footer />
         </body>
       </NextIntlClientProvider>

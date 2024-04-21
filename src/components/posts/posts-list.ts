@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 
-import type { Post } from "@/types/post";
+import type { Post } from "@/shared/interfaces/post";
 
 export const generatePosts = (): Post[] => {
   const t = useTranslations("posts");
