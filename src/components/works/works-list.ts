@@ -1,7 +1,7 @@
-import type { Work } from "@/types/work";
-
-import workImage from "@/assets/images/work.jpg";
 import { useTranslations } from "next-intl";
+
+import type { Work } from "@/shared/interfaces/work";
+import workImage from "@/public/images/work.jpg";
 
 export const generateWorksList = (): Work[] => {
   const t = useTranslations("projects");

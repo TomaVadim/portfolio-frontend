@@ -1,4 +1,4 @@
-import type { Post } from "@/types/post";
+import type { Post } from "@/shared/interfaces/post";
 import { Post as PostCard } from "@/components/post/post";
 
 interface Props {
