@@ -14,10 +14,10 @@ export default function Works() {
   const t = useTranslations("header");
 
   return (
-    <section className="content-container pt-20 lg:pt-[160px] tracking-wide">
-      <h1 className="lg:px-[16px] text-dark [font-size:_clamp(1.2rem,5vw,3rem)] font-bold">{t("projects")}</h1>
+    <section className="container px-4 max-w-[950px] pt-20 lg:pt-[160px] tracking-wide">
+      <h1 className="lg:px-4 text-dark text-[clamp(1.2rem,5vw,3rem)] font-bold">{t("projects")}</h1>
 
-      <div className="-mx-[16px] lg:mx-0 lg:mb-14 lg:mt-6">
+      <div className="lg:mb-14 lg:mt-6">
         <WorksList worksList={worksList} />
       </div>
     </section>
