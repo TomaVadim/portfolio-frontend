@@ -20,7 +20,7 @@ const links: Link[] = [
     icon: faGithub,
   },
   {
-    href: "#",
+    href: "https://www.instagram.com/_vadim_toma_",
     icon: faInstagram,
   },
 ];
