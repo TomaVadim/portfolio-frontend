@@ -12,14 +12,14 @@ export const Header = ({ locale }: { locale: string }): JSX.Element => {
   };
 
   return (
-    <header className="container py-2 w-full fixed z-50 top-0 left-0">
-      <nav className="container py-4 px-8 flex rounded-full justify-end gap-8 backdrop-blur-xl bg-white/30 tracking-wide">
+    <header className="py-2 w-full fixed z-50 top-0 left-0">
+      <nav className="container py-4 px-8 flex rounded-full justify-end items-center gap-4 lg:gap-8 backdrop-blur-xl bg-white/30 tracking-wide">
         <LanguagesToggler locale={locale} />
 
         <Link
           className={`${isActive(
             null,
-          )} text-medium lg:text-xl font-medium hover:text-primary transition-color duration-200`}
+          )} [font-size:_clamp(0.875rem,3vw,1.3rem)] font-medium hover:text-primary transition-color duration-200`}
           href="/"
         >
           {t("about-me")}
@@ -27,7 +27,7 @@ export const Header = ({ locale }: { locale: string }): JSX.Element => {
         <Link
           className={`${isActive(
             "works",
-          )} text-medium lg:text-xl font-medium hover:text-primary transition-color duration-200`}
+          )} [font-size:_clamp(0.875rem,3vw,1.3rem)] font-medium hover:text-primary transition-color duration-200`}
           href="/works"
         >
           {t("projects")}
@@ -35,7 +35,7 @@ export const Header = ({ locale }: { locale: string }): JSX.Element => {
         <Link
           className={`${isActive(
             "blog",
-          )} text-medium lg:text-xl font-medium hover:text-primary transition-color duration-200`}
+          )} [font-size:_clamp(0.875rem,3vw,1.3rem)] font-medium hover:text-primary transition-color duration-200`}
           href="/blog"
         >
           {t("blog")}

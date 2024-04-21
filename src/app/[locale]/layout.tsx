@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Montserrat } from "next/font/google";
-import "./globals.css";
+
+import { NextIntlClientProvider, useMessages } from "next-intl";
+
+import { locales } from "@/navigation";
 import { Header } from "@/components/header/header";
 import { Footer } from "@/components/footer/footer";
 
-import { notFound } from "next/navigation";
-import { NextIntlClientProvider, useMessages } from "next-intl";
-import { locales } from "@/navigation";
+import "./globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -28,7 +30,7 @@ export default function RootLayout({
   }
 
   const messages = useMessages();
-  console.log(messages);
+
   return (
     <html lang={locale}>
       <NextIntlClientProvider locale={locale} messages={messages}>
