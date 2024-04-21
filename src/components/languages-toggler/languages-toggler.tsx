@@ -13,9 +13,9 @@ export const LanguagesToggler = ({ locale }: { locale: string }): JSX.Element =>
     <select
       value={locale}
       onChange={handleChange}
-      className="bg-gray-50 border [font-size:_clamp(0.875rem,3vw,1.3rem)] text-center border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:outline-primary focus:border-primary block w-fit leading-none appearance-none py-1"
+      className="bg-gray-50 border [text-align:-webkit-center;] border-gray-300 text-dark text-sm rounded-lg focus:ring-primary focus:outline-primary focus:border-primary block w-fit leading-tight appearance-none px-1 py-[2px]"
     >
-      <option value="en">En</option>
+      <option value="en">Eng</option>
       <option value="uk">Укр</option>
     </select>
   );
