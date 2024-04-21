@@ -4,5 +4,5 @@ export interface Post {
   title: string;
   length?: number;
   categores: string;
-  text: string;
+  text: string[];
 }
