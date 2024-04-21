@@ -13,8 +13,8 @@ export default function Blog() {
   const postsList = generatePosts();
 
   return (
-    <section className="content-container pt-20 lg:pt-[160px] tracking-wide">
-      <h1 className="lg:px-5 text-dark [font-size:_clamp(1.2rem,5vw,3rem)] font-bold">{t("blog")}</h1>
+    <section className="container px-4 max-w-[950px] pt-20 lg:pt-[160px] tracking-wide">
+      <h1 className="lg:px-5 text-dark text-[clamp(1.2rem,5vw,3rem)] font-bold">{t("blog")}</h1>
 
       <div className="lg:mb-14 lg:mt-6">
         <AllPosts postsList={postsList} />
