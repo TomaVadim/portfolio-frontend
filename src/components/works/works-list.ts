@@ -16,7 +16,7 @@ export const generateWorksList = (): Work[] => {
       nameOfWork: t("demining-georesource-title"),
       year: "2023",
       technologies: "React, TS",
-      describing: t("designing-dashboards-text"),
+      describing: t("demining-georesource-text"),
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ export const generateWorksList = (): Work[] => {
       nameOfWork: t("finance-and-consultancy-solution-title"),
       year: "2022",
       technologies: "Html, Scss, JS",
-      describing: t("designing-dashboards-text"),
+      describing: t("finance-and-consultancy-solution-text"),
     },
   ];
 };
