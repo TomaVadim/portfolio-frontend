@@ -7,9 +7,13 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 export const WorkCard = ({ imageSrc, alt, href, nameOfWork, year, technologies, describing }: Work): JSX.Element => {
   return (
     <article className="pt-6 pb-8 flex flex-col lg:grid lg:grid-cols-10 gap-5 border-b border-gray-300">
-      <div className="aspect-[246px/180px] col-start-1 col-span-3 rounded-md h-fit overflow-hidden border border-light bg-gray-100">
+      <a
+        href={href}
+        rel="noopener noreferrer"
+        className="block aspect-[246px/180px] col-start-1 col-span-3 rounded-md h-fit overflow-hidden border border-light bg-gray-100"
+      >
         <Image src={imageSrc} alt={alt} />
-      </div>
+      </a>
       <div className="col-start-4 col-span-6">
         <h3 className="mb-4 font-semibold text-[clamp(1.5rem,5vw,1.875rem)]">
           <a href={href} rel="noopener noreferrer" className="flex items-center gap-2">

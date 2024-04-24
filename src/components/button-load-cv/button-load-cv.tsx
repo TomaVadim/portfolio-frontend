@@ -10,7 +10,6 @@ export const ButtonLoadCV = (): JSX.Element => {
     <a
       rel="noopener noreferrer"
       href={linkToCV}
-      target="_blank"
       className="px-5 py-3 w-fit text-white bg-primary hover:bg-primary/90 transition-colors duration-200 rounded-sm"
     >
       {t("button-load-resume")}
