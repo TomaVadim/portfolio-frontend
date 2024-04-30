@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { useTranslations } from "next-intl";
 
-import myAvatar from "@/public/images/my-avatar.jpeg";
+import myAvatar from "@/public/images/my-avatar.png";
 import { ButtonLoadCV } from "@/components/button-load-cv/button-load-cv";
 
 export const Introduce = (): JSX.Element => {
@@ -18,9 +18,16 @@ export const Introduce = (): JSX.Element => {
         <ButtonLoadCV />
       </article>
       <div>
-        <div className="rounded-full -translate-y-6 lg:-translate-y-12 shadow-md overflow-hidden w-[150px] h-[150px] lg:w-[243px] lg:h-[243px]">
-          <div className="aspect-[4000px/6000px] bg-gray-200">
-            <Image width={250} priority height={250} src={myAvatar} alt="Photo with me" />
+        <div className="border-2 border-primary rounded-full -translate-y-6 lg:-translate-y-12 shadow-md overflow-hidden w-[150px] h-[150px] lg:w-[243px] lg:h-[243px]">
+          <div className="aspect-[4000px/6000px] bg-gray-100">
+            <Image
+              width={250}
+              className="scale-125 -translate-x-5"
+              priority
+              height={250}
+              src={myAvatar}
+              alt="Photo with me"
+            />
           </div>
         </div>
       </div>
